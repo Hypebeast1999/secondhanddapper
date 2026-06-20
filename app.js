@@ -14,8 +14,36 @@ function fmt(n) {
   return "$" + n.toLocaleString();
 }
 
+function stars(n) {
+  return "★".repeat(n) + "☆".repeat(5 - n);
+}
+
 function renderProducts(category = activeCategory, query = searchInput.value) {
   activeCategory = category;
+
+  if (category === "reviews") {
+    let reviews = REVIEWS;
+    const q = query.trim().toLowerCase();
+    if (q) {
+      reviews = reviews.filter(r =>
+        r.name.toLowerCase().includes(q) ||
+        r.item.toLowerCase().includes(q) ||
+        r.text.toLowerCase().includes(q)
+      );
+    }
+    grid.innerHTML = reviews.map(r => `
+      <div class="card review-card">
+        <div class="card-body">
+          <span class="review-stars">${stars(r.rating)}</span>
+          <h3 class="card-title">${r.name}</h3>
+          <p class="card-sub">Bought: ${r.item}</p>
+          <p class="review-text">${r.text}</p>
+        </div>
+      </div>
+    `).join("") || `<p style="padding:24px;color:var(--muted)">No reviews found.</p>`;
+    return;
+  }
+
   let items = category === "all" ? PRODUCTS : PRODUCTS.filter(p => p.category === category);
   const q = query.trim().toLowerCase();
   if (q) {

@@ -191,6 +191,10 @@ body {
 }
 .add-btn:hover { background: #000; color: #fff; }
 
+.review-card { cursor: default; padding-bottom: 4px; }
+.review-stars { color: var(--accent); font-size: 14px; letter-spacing: 1px; }
+.review-text { font-size: 13px; color: var(--text); margin: 6px 0 0; line-height: 1.5; }
+
 .cart-panel {
   position: fixed;
   top: 0;

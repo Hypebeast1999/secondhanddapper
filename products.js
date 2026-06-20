@@ -20,3 +20,12 @@ const PRODUCTS = [
   { id: "s5", category: "sneakers", emoji: "👟", tag: "New Balance", title: "990v3 'Teddy Santis'", sub: "Unisex, Brand New", price: 250 },
   { id: "s6", category: "sneakers", emoji: "👟", tag: "Nike x A Ma Maniere", title: "Air Jordan 4 'Violet Ore'", sub: "Women's, Rare", price: 890 },
 ];
+
+const REVIEWS = [
+  { id: "rv1", name: "Marcus T.", rating: 5, item: "Lakers Purple Reign Fitted", text: "Fit was clean and shipped fast. Exactly as pictured." },
+  { id: "rv2", name: "Jasmine R.", rating: 5, item: "Vintage Persian Tabriz", text: "Stunning rug, way better in person. Worth every penny." },
+  { id: "rv3", name: "Devon K.", rating: 4, item: "Air Jordan 4 'Bred Reimagined'", text: "Authentic and in great shape. Box had a small dent but the shoes are fire." },
+  { id: "rv4", name: "Olivia P.", rating: 5, item: "Air Force 1 Low 'Cactus Jack'", text: "Been hunting for these forever. Seller was responsive and packaging was secure." },
+  { id: "rv5", name: "Tyrell B.", rating: 5, item: "Bulls Snapback '96", text: "Quality is top notch, smells brand new. Will buy again." },
+  { id: "rv6", name: "Sara M.", rating: 4, item: "Mojave Geometric Rug", text: "Beautiful colors, slightly smaller than expected but still happy with it." },
+];
