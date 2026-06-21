@@ -1,117 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Curated &mdash; Hats, Rugs & Sneakers</title>
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="header-inner">
-      <h1 class="logo">Secondhanddapper</h1>
-      <nav class="filters" id="filters">
-        <button class="filter-btn active" data-category="all">All</button>
-        <button class="filter-btn" data-category="hats">Hats</button>
-        <button class="filter-btn" data-category="rugs">Designer Rugs</button>
-        <button class="filter-btn" data-category="sneakers">Sneakers</button>
-        <button class="filter-btn" data-category="reviews">Reviews</button>
-      </nav>
-      <div class="search-wrap">
-        <input type="text" id="searchInput" placeholder="Search for hats, rugs, sneakers...">
-      </div>
-      <div class="cart-toggle" id="cartToggle">
-        Bag <span id="cartCount">0</span>
-      </div>
-    </div>
-  </header>
-
-  <section class="hero">
-    <h2>Buy and sell the culture's most wanted.</h2>
-    <p>Verified NBA team fits, designer rugs, and the sneakers everyone's chasing &mdash; at the current market price.</p>
-  </section>
-
-  <main class="grid" id="productGrid"></main>
-
-  <aside class="cart-panel" id="cartPanel">
-    <div class="cart-header">
-      <h3>Your Bag</h3>
-      <button id="closeCart">&times;</button>
-    </div>
-    <div class="cart-items" id="cartItems"></div>
-    <div class="cart-footer">
-      <div class="cart-total">Total: <span id="cartTotal">$0</span></div>
-      <button class="checkout-btn" id="checkoutBtn">Checkout</button>
-    </div>
-  </aside>
-  <div class="overlay" id="overlay"></div>
-
-  <div class="modal" id="checkoutModal">
-    <div class="modal-box">
-      <div class="modal-header">
-        <h3>Checkout</h3>
-        <button id="closeCheckout">&times;</button>
-      </div>
-
-      <div class="modal-body">
-        <div class="pay-tabs" id="payTabs">
-          <button class="pay-tab active" data-method="card">Visa / Card</button>
-          <button class="pay-tab" data-method="cashapp">Cash App</button>
-          <button class="pay-tab" data-method="paypal">PayPal</button>
-        </div>
-
-        <form id="payForm">
-          <div class="pay-fields" data-method-fields="card">
-            <label>Card number
-              <input type="text" id="cardNumber" placeholder="4242 4242 4242 4242" inputmode="numeric" maxlength="19" required>
-            </label>
-            <div class="field-row">
-              <label>Expiry
-                <input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5" required>
-              </label>
-              <label>CVC
-                <input type="text" id="cardCvc" placeholder="123" inputmode="numeric" maxlength="4" required>
-              </label>
-            </div>
-            <label>Name on card
-              <input type="text" id="cardName" placeholder="Jane Doe" required>
-            </label>
-          </div>
-
-          <div class="pay-fields hidden" data-method-fields="cashapp">
-            <label>Cash App $Cashtag
-              <input type="text" id="cashtag" placeholder="$janedoe" required>
-            </label>
-            <p class="pay-hint">You'll confirm this payment from the Cash App on your phone.</p>
-          </div>
-
-          <div class="pay-fields hidden" data-method-fields="paypal">
-            <label>PayPal email
-              <input type="email" id="paypalEmail" placeholder="jane@example.com" required>
-            </label>
-            <p class="pay-hint">You'll be redirected to PayPal to log in and approve this payment.</p>
-          </div>
-
-          <div class="modal-total">Total due: <span id="modalTotal">$0</span></div>
-          <button type="submit" class="pay-submit-btn" id="paySubmitBtn">Pay with Card</button>
-          <p class="pay-disclaimer">Demo checkout &mdash; no real payment is processed.</p>
-        </form>
-
-        <div class="pay-success hidden" id="paySuccess">
-          <div class="success-icon">&#10003;</div>
-          <h4>Order confirmed</h4>
-          <p id="successDetail"></p>
-          <button class="checkout-btn" id="closeSuccess">Done</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <footer class="site-footer">
-    <p>&copy; 2026 Curated. Built for the culture.</p>
-  </footer>
-
-  <script src="products.js"></script>
-  <script src="app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secondhanddapper &mdash; Hats, Rugs & Sneakers</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
